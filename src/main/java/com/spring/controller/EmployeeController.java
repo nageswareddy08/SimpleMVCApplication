@@ -13,12 +13,11 @@ import java.util.List;
  * Created by Nageswar on 6/24/2018.
  */
 @Controller
-@RequestMapping(value = "/employee")
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @RequestMapping(value = "/details")
+    @RequestMapping(value = "/employeeDetails")
     public ModelAndView getEmployeeDetails() {
         ModelAndView modelAndView = new ModelAndView("employeeListDisplay");
         List<EmployeeVo> employeeVoList = employeeService.getEmployeeDetails();
